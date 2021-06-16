@@ -5,11 +5,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet">
   <title>Objects</title>
 </head>
 
 <body>
   <h1>Library</h1>
+  <button class="button">Add a book!</button>
+
+  <form class="form" id="form">
+    <input type="text" placeholder="Book Title" name="title" class="title">
+    <input type="text" placeholder="Author" name="author" class="author">
+    <input type="number" placeholder="Number of Pages" name="pages" class="pages">
+    <input type="radio" id="yes" name="read" value="Yes">
+    <label for="yes">Yes!</label><br>
+    <input type="radio" id="no" name="gender" value="no">
+    <label for="no">Not yet!</label><br>
+    <input type="number" placeholder="What's your rating?" class="rating">
+    <input type="submit" value="Submit">
+  </form>
+
   <script src="script.js"></script>
 </body>
 
