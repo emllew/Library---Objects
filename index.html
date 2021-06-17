@@ -11,19 +11,23 @@
 
 <body>
   <h1>Library</h1>
-  <button class="button">Add a book!</button>
+  <button class="button">Add a new book</button>
 
-  <form class="form" id="form">
+  <form class="form hideForm" id="form">
     <input type="text" placeholder="Book Title" name="title" class="title">
+    <br />
     <input type="text" placeholder="Author" name="author" class="author">
+    <br />
     <input type="number" placeholder="Number of Pages" name="pages" class="pages">
-    <input type="radio" id="yes" name="read" value="Yes">
+    <br />
+    <p>Have you read this book?</p>
+    <input type="radio" id="yes" name="read" value="Has been read.">
     <label for="yes">Yes!</label><br>
-    <input type="radio" id="no" name="gender" value="no">
+    <input type="radio" id="no" name="gender" value="Has not been read.">
     <label for="no">Not yet!</label><br>
-    <input type="number" placeholder="What's your rating?" class="rating">
     <input type="submit" value="Submit">
   </form>
+  <p class="card"></p>
 
   <script src="script.js"></script>
 </body>
