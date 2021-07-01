@@ -6,6 +6,7 @@ let card = document.querySelector('.card');
 //hide show the form
 function refreshForm() {
   form.setAttribute('class', 'hideForm');
+  form.reset();
 }
 button.addEventListener('click', (e) => {
   form.removeAttribute('class', 'hideForm');
@@ -28,29 +29,35 @@ function Book(title, author, pages, read) {
   this.author = author;
   this.pages = pages;
   this.read = read;
+  //this shows it in the console and in the newly added one
   this.info = function () {
-    localStorage.setItem('title', title);
-    localStorage.setItem('author', author);
-    localStorage.setItem('pages', pages);
-    localStorage.setItem('read', read);
-    return title + ' by ' + author + '. ' + pages + ' pages ' + read;
+    return (
+      capitalizeFirstLetter(title) +
+      ' by ' +
+      capitalizeFirstLetter(author) +
+      '. ' +
+      capitalizeFirstLetter(pages) +
+      ' pages ' +
+      capitalizeFirstLetter(read)
+    );
   };
 }
 
 function addBookToLibrary(title, author, read, pages) {
   let newBook = new Book(title, author, read, pages);
-  console.log(newBook);
-  myLibrary.push(newBook);
-  card.innerHTML = newBook.info();
-  console.log(JSON.stringify(myLibrary) + 'my library is this now');
+  myLibrary.unshift(newBook);
+  let newCard = document.createElement('p');
+  card.appendChild(newCard);
+  newCard.textContent = newBook.info();
 }
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+///first page display card
 const book1 = new Book('The Hobbit', 'Tolkein', '265', 'has been read');
-console.log(book1.info());
+
 let str1 =
   book1.title +
   ', by ' +
@@ -59,5 +66,5 @@ let str1 =
   book1.pages +
   ' pages. ' +
   book1.read;
-myLibrary.push(book1);
-card.innerHTML = str1;
+myLibrary.unshift(book1);
+card.textContent = str1;
