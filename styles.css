@@ -2,10 +2,14 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
+  margin: 9% auto;
 }
 
 .hideForm {
   display: none;
+}
+.form {
+  font-size: 30px;
 }
 button {
   padding: 10px;
@@ -24,8 +28,13 @@ button {
 button:hover {
   cursor: pointer;
 }
+form {
+  padding: 30px;
+}
 .card {
   background-color: azure;
-  color: cadetblue;
+  color: rgb(6, 150, 155);
   padding: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
 }
