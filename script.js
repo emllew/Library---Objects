@@ -2,6 +2,8 @@ let myLibrary = [];
 let button = document.querySelector('button');
 let form = document.querySelector('form');
 let card = document.querySelector('.card');
+card.setAttribute('class', 'added');
+let removeButton = document.createElement('button');
 
 //hide show the form
 function refreshForm() {
@@ -46,7 +48,7 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(title, author, read, pages) {
   let newBook = new Book(title, author, read, pages);
   myLibrary.unshift(newBook);
-  let newCard = document.createElement('p');
+  let newCard = document.createElement('div');
   card.appendChild(newCard);
   newCard.textContent = newBook.info();
 }
@@ -57,14 +59,6 @@ function capitalizeFirstLetter(string) {
 
 ///first page display card
 const book1 = new Book('The Hobbit', 'Tolkein', '265', 'has been read');
-
-let str1 =
-  book1.title +
-  ', by ' +
-  book1.author +
-  '. ' +
-  book1.pages +
-  ' pages. ' +
-  book1.read;
 myLibrary.unshift(book1);
+let str1 = book1.title + book1.author;
 card.textContent = str1;
