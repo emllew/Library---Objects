@@ -1,40 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+  --background: #fcf4d9;
+  --white: #fffcf4;
+  --orange: #e97b5f;
+  --mid-light: #00aaa0;
+}
+html,
 body {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Inter', sans-serif;
   text-align: center;
-  margin: 9% auto;
+  margin: 0;
+  height: 100%;
+  color: var(--mid-light);
+  display: flex;
+  flex-direction: column;
 }
 
+main {
+  padding: 40px;
+  height: 100%;
+  background-color: var(--background);
+}
 .hideForm {
   display: none;
 }
-.form {
-  font-size: 30px;
+form {
+  background-color: var(--background);
 }
 button {
   padding: 10px;
-  margin: 5px;
-  background-color: azure;
+  margin: 15px;
+  background-color: var(--mid-light);
   border: none;
-  border-radius: 30px;
+  border-radius: 3px;
+  color: var(--white);
 }
-.submit {
-  padding: 10px;
-  margin: 5px;
-  background-color: azure;
-  border: none;
-  border-radius: 30px;
-}
+
 button:hover {
   cursor: pointer;
 }
 form {
+  border-radius: 2px;
   padding: 30px;
+  margin: 20px auto;
+  width: 320px;
+  height: 300px;
 }
-.card {
-  background-color: azure;
-  color: rgb(6, 150, 155);
-  padding: 50px;
-  margin-right: 100px;
-  margin-left: 100px;
+input#yes,
+input#no {
+  width: 10px;
+  margin: 5px;
+}
+p {
+  margin: 5px;
+  margin-top: 20px;
+}
+input.submit {
+  margin: 20px;
+  border: none;
+  background-color: var(--mid-light);
+  color: white;
+}
+input {
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+}
+.added {
+  display: flex;
+  flex-wrap: wrap;
+}
+.bookCard {
+  flex-wrap: wrap;
+  background: var(--orange);
+  color: var(--white);
+  width: 300px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 4px 4px 8px rgb(163, 159, 139);
 }
